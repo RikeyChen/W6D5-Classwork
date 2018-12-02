@@ -4,10 +4,12 @@
 
 import React from 'react';
 
-const TabsHeader = (props) => (
-  <h1 onClick = {props.clickFunc}>
-    {props.title}
-  </h1>
-);
+const TabsHeader = (props) => {
+  const active = props.selectedTab === props.tabNum ? "active" : "";
+  return (
+    <li onClick={props.showTab} className={active}>
+      {props.title}
+    </li>
+)};
 
 export default TabsHeader;

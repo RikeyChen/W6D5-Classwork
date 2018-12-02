@@ -1,6 +1,7 @@
 body {
   display: flex;
   justify-content: center;
+  font-family: Arial;
 }
 
 .clock-container {
@@ -8,7 +9,6 @@ body {
   color: white;
   border: 1px solid black;
   padding: 5px 20px;
-  font-family: 'Open Sans', sans-serif;
   width: 500px;
 }
 
@@ -20,4 +20,81 @@ body {
 .date-container {
   display: flex;
   justify-content: space-between;
+}
+
+.tabs-auto-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabs-container {
+  padding: 0;
+  /* border: 1px solid black; */
+  /* border-radius: 5px; */
+  width: 200px;
+  height: 200px;
+}
+
+.tabs-header-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tabs-header-container > li {
+  text-align: center;
+  width: 40px;
+  padding: 5px;
+  list-style: none;
+  /* border-bottom: 2px solid black; */
+  width: 33%;
+  border: 1px solid black;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: lightblue;
+} 
+
+.tabs-header-container > li:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.active {
+  font-weight: 900;
+}
+
+.tabs-content {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 170px;
+  background-color: lightblue;
+  border: 1px solid black;
+  border-top: none;
+}
+
+.auto-container {
+  position: relative;
+  background-color: rgb(119, 226, 70);
+  height: 200px;
+  border: 1px solid black;
+}
+
+.auto-container > input {
+  position: absolute;
+  left: 40px;
+  top: 20px;
+}
+
+.auto-container > ul {
+  position: absolute;
+  left: 40px;
+  top: 30px;
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  list-style-type: square;
+  cursor: pointer;
 }

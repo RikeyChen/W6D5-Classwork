@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Clock from './clock'
 import Tabs from './tabs'
+import AutoComplete from './autocomplete'
 
 const tabInfo = [
   {
@@ -18,10 +19,15 @@ const tabInfo = [
   }
 ];
 
+const users = ['Abby', 'Bob', 'Candice', 'Henry', 'Louis', 'Mark', 'Robert', 'Zoe']
+
 const Root = () => (
   <div>
     <Clock />
-    <Tabs array={tabInfo} />
+    <div className="tabs-auto-container">
+      <Tabs array={tabInfo} />
+      <AutoComplete names={users}/>
+    </div>
   </div>
 );
 

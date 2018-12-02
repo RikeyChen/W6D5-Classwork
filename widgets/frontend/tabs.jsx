@@ -23,14 +23,19 @@ class Tabs extends React.Component {
   render () {
     return (
       <div>
-        <ul>
-          {this.props.array.map( (el, idx) => <TabsHeader clickFunc={ this.showTab } title={el.title} key1={idx}/>)}
-          {this.props.array.map(el => <p> {el.content} </p>)}
+        <h1>Tabs</h1>
+        <ul className="tabs-container">
+          <header className="tabs-header-container">
+            {this.props.array.map( (el, idx) => <TabsHeader showTab={ this.showTab } title={el.title} key={idx} tabNum={idx} selectedTab={this.state.idx}/>)}
+          </header>
+          <article className="tabs-content">
+            {this.props.array[this.state.idx].content}
+          </article>
         </ul>
       </div>
     )
   }
-  
+
 }
 
 export default Tabs;
